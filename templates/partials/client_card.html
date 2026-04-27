@@ -1,0 +1,6 @@
+<a href="/clients/{{ client.id }}" class="glass rounded-xl p-4 block hover:border-emerald-500/50 transition">
+    <h3 class="font-semibold text-emerald-400">{{ client.name }}</h3>
+    {% if client.phone %}<p class="text-sm text-slate-400">{{ client.phone }}</p>{% endif %}
+    {% if client.email %}<p class="text-sm text-slate-400">{{ client.email }}</p>{% endif %}
+    {% if client.notes %}<p class="text-xs text-slate-500 mt-1">{{ client.notes }}</p>{% endif %}
+</a>

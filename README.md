@@ -1,38 +1,36 @@
 # RotinaPro
 
-Diagnostico de automacao + playbooks prontos pra seu negocio em 5 minutos.
+Automatize follow-ups, cobrancas e relatorios do seu negocio em 5 minutos.
 
 ## Como rodar
 
 ```bash
 pip install -r requirements.txt
-cp .env.example .env   # edite com suas chaves
+export SECRET_KEY="sua-chave-secreta"
 python app.py
 ```
 
-Acesse `http://localhost:5000`.
+Acesse http://localhost:5000
 
 ## Features implementadas
 
-- **Auth** - Registro e login com email+senha (hash via werkzeug, sessao Flask)
-- **Diagnostico** - Quiz de 8 perguntas que classifica o perfil operacional
-- **Playbook** - Geracao de playbook personalizado via LLM (Anthropic Claude) com fallback rule-based
-- **Templates** - Biblioteca de templates acionaveis (mensagens WhatsApp, prompts IA, planilhas) filtrados por nicho e categoria
-- **Checklist** - Checklist interativo (htmx) com progresso por playbook
-- **Dashboard** - Painel com metricas de progresso e playbooks salvos
+- **Auth**: Cadastro e login com email+senha (hash werkzeug, sessao Flask)
+- **Clientes**: CRUD completo com nome, telefone, email, notas
+- **Follow-ups**: Agenda por cliente com status (pendente/feito/atrasado), filtros e marcacao via htmx
+- **Cobrancas**: Registro de pagamentos com valor, vencimento, status (pendente/pago/vencido)
+- **Dashboard**: Painel resumo com cobrancas vencidas, follow-ups atrasados, faturamento do mes
 
 ## Stack
 
 - Python 3 + Flask
-- SQLite (banco local, auto-criado no startup)
-- htmx (interatividade sem JS custom)
-- Tailwind CSS (via CDN)
-- Anthropic API (opcional - funciona sem chave com fallback)
+- SQLite (zero config)
+- htmx (interacoes sem reload)
+- Tailwind CSS via CDN
 
-## Proximos passos
+## Proximos passos sugeridos
 
-- Integracao com WhatsApp Business API para disparo real
-- Plano Pro com templates exclusivos e playbooks ilimitados
-- Exportar playbook em PDF
-- Notificacoes por email de progresso
-- Multi-idioma
+- Notificacoes por email/WhatsApp para follow-ups atrasados
+- Exportacao de relatorio financeiro em PDF/CSV
+- Recorrencia automatica de cobrancas
+- Multi-usuario com permissoes (equipe)
+- Deploy em Railway/Render com PostgreSQL

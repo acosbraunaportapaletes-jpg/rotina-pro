@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% block title %}{{ client.name }} - RotinaPro{% endblock %}
+{% block content %}
+<a href="/clients" class="text-emerald-400 text-sm hover:underline">&larr; Voltar para clientes</a>
+
+<div class="glass rounded-xl p-6 mt-4 mb-6">
+    <div class="flex items-start justify-between mb-4">
+        <h1 class="text-2xl font-bold">{{ client.name }}</h1>
+        <button hx-delete="/clients/{{ client.id }}" hx-confirm="Tem certeza que deseja remover este cliente e todos seus dados?"
+            hx-target="body" hx-swap="innerHTML"
+            class="text-red-400 hover:text-red-300 text-sm transition">Remover cliente</button>
+    </div>
+
+    <form hx-put="/clients/{{ client.id }}" hx-target="body" class="space-y-4">
+        <div class="grid md:grid-cols-2 gap-4">
+            <div>
+                <label class="block text-sm text-slate-400 mb-1">Nome</label>
+                <input type="text" name="name" value="{{ client.name }}" required
+                    class="w-full bg-slate-800 border border-slate-600 rounded-lg px-4 py-2 focus:border-emerald-500 focus:outline-none">
+            </div>
+            <div>
+                <label class="block text-sm text-slate-400 mb-1">Telefone</label>
+                <input type="text" name="phone" value="{{ client.phone }}"
+                    class="w-full bg-slate-800 border border-slate-600 rounded-lg px-4 py-2 focus:border-emerald-500 focus:outline-none">
+            </div>
+            <div>
+                <label class="block text-sm text-slate-400 mb-1">Email</label>
+                <input type="email" name="email" value="{{ client.email }}"
+                    class="w-full bg-slate-800 border border-slate-600 rounded-lg px-4 py-2 focus:border-emerald-500 focus:outline-none">
+            </div>
+            <div>
+                <label class="block text-sm text-slate-400 mb-1">Notas</label>
+                <input type="text" name="notes" value="{{ client.notes }}"
+                    class="w-full bg-slate-800 border border-slate-600 rounded-lg px-4 py-2 focus:border-emerald-500 focus:outline-none">
+            </div>
+        </div>
+        <button type="submit" class="bg-emerald-600 hover:bg-emerald-500 px-6 py-2 rounded-lg text-sm transition">Atualizar</button>
+    </form>
+</div>
+
+<div class="grid md:grid-cols-2 gap-6">
+    <!-- Follow-ups -->
+    <div class="glass rounded-xl p-6">
+        <h2 class="text-lg font-semibold mb-4">Follow-ups</h2>
+        {% if followups|length == 0 %}
+            <p class="text-slate-500 text-sm">Nenhum follow-up para este cliente.</p>
+        {% else %}
+            <div class="space-y-2">
+            {% for f in followups %}
+                <div class="flex items-center justify-between bg-slate-800/50 rounded-lg p-3 text-sm">
+                    <div>
+                        <span class="{% if f.status == 'done' %}line-through text-slate-500{% elif f.due_date < today %}text-red-400{% endif %}">
+                            {{ f.due_date }}
+                        </span>
+                        {% if f.note %}<span class="text-slate-400 ml-2">{{ f.note }}</span>{% endif %}
+                    </div>
+                    <span class="text-xs px-2 py-1 rounded
+                        {% if f.status == 'done' %}bg-emerald-900/50 text-emerald-400
+                        {% elif f.due_date < today %}bg-red-900/50 text-red-400
+                        {% else %}bg-yellow-900/50 text-yellow-400{% endif %}">
+                        {% if f.status == 'done' %}feito{% elif f.due_date < today %}atrasado{% else %}pendente{% endif %}
+                    </span>
+                </div>
+            {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+
+    <!-- Billings -->
+    <div class="glass rounded-xl p-6">
+        <h2 class="text-lg font-semibold mb-4">Cobrancas</h2>
+        {% if billings|length == 0 %}
+            <p class="text-slate-500 text-sm">Nenhuma cobranca para este cliente.</p>
+        {% else %}
+            <div class="space-y-2">
+            {% for b in billings %}
+                <div class="flex items-center justify-between bg-slate-800/50 rounded-lg p-3 text-sm">
+                    <div>
+                        <span class="font-medium">{{ b.amount_cents|brl }}</span>
+                        <span class="text-slate-400 ml-2">{{ b.due_date }}</span>
+                        {% if b.description %}<span class="text-slate-500 ml-2">{{ b.description }}</span>{% endif %}
+                    </div>
+                    <span class="text-xs px-2 py-1 rounded
+                        {% if b.status == 'paid' %}bg-emerald-900/50 text-emerald-400
+                        {% elif b.due_date < today %}bg-red-900/50 text-red-400
+                        {% else %}bg-yellow-900/50 text-yellow-400{% endif %}">
+                        {% if b.status == 'paid' %}pago{% elif b.due_date < today %}vencido{% else %}pendente{% endif %}
+                    </span>
+                </div>
+            {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

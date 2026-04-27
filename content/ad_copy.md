@@ -1,48 +1,41 @@
-# Ads — RotinaPro | 3 Variantes
+# Ads Copy — RotinaPro
 
 ---
 
 ## Variante A — DOR
 
 **Headline (38 chars)**
-`Cansou de perder horas no operacional?`
+`Cansou de perder horas em planilhas?`
 
 **Primary Text (124 chars)**
-`Você ainda faz follow-up, relatórios e conciliação na mão? O RotinaPro diagnostica seu negócio e entrega automações em 5 min.`
+`Pequenos empresários gastam +5h/semana em follow-ups e cobranças manuais. O RotinaPro automatiza tudo isso em 5 minutos.`
 
-**CTA:** `Quero meu diagnóstico`
+**CTA:** `Teste Grátis`
 
 ---
 
 ## Variante B — RESULTADO
 
 **Headline (40 chars)**
-`Automatize seu negócio em apenas 5 min`
+`Automatize cobranças e follow-ups hoje`
 
 **Primary Text (122 chars)**
-`Receba um diagnóstico completo + playbooks prontos pra eliminar tarefas repetitivas. Sem técnica, sem complicação. Grátis.`
+`Em 5 min você configura follow-ups, cobranças e relatórios automáticos. Sem planilha, sem retrabalho, sem esquecer nada.`
 
-**CTA:** `Começar agora`
+**CTA:** `Começar Agora`
 
 ---
 
 ## Variante C — CURIOSIDADE
 
 **Headline (39 chars)**
-`O teste de 5 min que muda sua rotina`
+`O truque de 5 min que elimina retrabalho`
 
 **Primary Text (125 chars)**
-`Pequenos empresários estão cortando horas de trabalho manual com um diagnóstico simples. Descubra quais tarefas você pode zerar.`
+`Donos de negócio estão trocando planilhas por automações simples e recuperando horas toda semana. Descubra como com RotinaPro.`
 
-**CTA:** `Descobrir agora`
+**CTA:** `Quero Saber Como`
 
 ---
 
-### Notas rápidas
-| | Headline | Primary Text |
-|---|---|---|
-| **A (Dor)** | 38 chars | 124 chars |
-| **B (Resultado)** | 40 chars | 122 chars |
-| **C (Curiosidade)** | 39 chars | 125 chars |
-
-Todos dentro dos limites. Adapte o CTA conforme o objetivo da campanha (Lead Form → "Quero meu diagnóstico"; Landing Page → "Começar agora").
+**Obs.:** Todas as headlines estão dentro do limite de 40 caracteres e os textos primários dentro de 125. Os CTAs foram escolhidos para combinar com o estágio de consciência de cada variante (A = alívio, B = ação imediata, C = descoberta).

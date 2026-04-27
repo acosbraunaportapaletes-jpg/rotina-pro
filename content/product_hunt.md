@@ -1,16 +1,16 @@
-# Product Hunt Launch Post — RotinaPro
+# RotinaPro — Product Hunt Launch Post
 
 ---
 
-## Tagline (56 chars)
+## Tagline (55 chars)
 
-**Your automation diagnosis + ready-to-use playbooks in 5 min**
+**Automate follow-ups, billing & reports in 5 minutes**
 
 ---
 
-## Description (253 chars)
+## Description (258 chars)
 
-**RotinaPro scans your business operations and tells you exactly what to automate, how, and with which tools. Answer a few questions, get a personalized diagnosis with step-by-step playbooks — no code, no consultants. Built for small teams drowning in busywork.**
+**Small business owners waste hours on repetitive tasks — chasing payments, sending follow-ups, building reports in messy spreadsheets. RotinaPro automates your daily routines with no-code workflows you set up in 5 min. Built for teams of 1-10. Free to start.**
 
 ---
 
@@ -18,10 +18,8 @@
 
 **Hey Product Hunt! 👋**
 
-I spent 4 years consulting for small businesses — shops, service providers, local agencies — and kept seeing the same pattern. Owners working 12-hour days not because the business demanded it, but because they were buried in manual tasks: reconciling payments in spreadsheets, chasing clients on WhatsApp, copy-pasting data between tabs to build weekly reports. They knew "automation" existed, but had no idea where to start or what tools to pick.
+I ran a small services agency for 4 years, and every week the same story repeated: Monday morning buried in spreadsheets reconciling payments, copy-pasting follow-up messages to clients who forgot to pay, and manually pulling together reports that nobody had time to read. I tried Zapier, tried CRMs — they were either too complex for my 6-person team or way too expensive for what we actually needed. So I kept going back to spreadsheets and WhatsApp reminders. I know I'm not alone in this.
 
-So I built RotinaPro. You answer a short diagnostic about your business (takes ~5 minutes), and it maps exactly where you're bleeding time. Then it gives you ready-made playbooks — step-by-step guides with specific tools, templates, and workflows you can implement the same day. No jargon, no code, no $5k consulting engagement. Just "here's your problem, here's the fix, here's how to do it."
+That frustration became RotinaPro. We built it specifically for small business owners (shops, agencies, service providers) who don't have a dedicated ops team but still need things to run on autopilot. You connect your tools, pick from ready-made workflow templates — payment reminders, client follow-ups, daily/weekly reports — and you're live in minutes, not days. No code, no consultants, no 47-step onboarding. If you can use a spreadsheet, you can use RotinaPro.
 
-We're launching with diagnostics for the most common small-business bottlenecks: financial reconciliation, client follow-up, reporting, scheduling, and inventory. Every playbook is built from real cases I've seen work in the field — not theoretical frameworks, but stuff that actually saved hours for real business owners.
-
-I'd love your honest feedback — especially if you run a small team and deal with this kind of operational chaos daily. What workflows eat up most of your time? Drop a comment, I'll personally help you figure out the fix. 🙌
+We're launching today with a generous free tier so you can test it with real workflows before committing. I'd genuinely love your feedback — what automations would save YOU the most time each week? Drop a comment, try it out, and let me know what's missing. We're building this alongside the people who use it, and your input today directly shapes what we ship next. Thanks for the support! 🚀

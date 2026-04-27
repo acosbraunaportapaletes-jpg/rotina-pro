@@ -1,0 +1,11 @@
+{% if clients|length == 0 %}
+    <div class="glass rounded-xl p-8 text-center">
+        <p class="text-slate-400">Nenhum cliente cadastrado. Clique em "+ Novo cliente" para comecar.</p>
+    </div>
+{% else %}
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+    {% for client in clients %}
+        {% include "partials/client_card.html" %}
+    {% endfor %}
+</div>
+{% endif %}

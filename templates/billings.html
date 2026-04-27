@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Cobrancas - RotinaPro{% endblock %}
+{% block content %}
+<div class="flex items-center justify-between mb-6">
+    <h1 class="text-2xl font-bold">Cobrancas</h1>
+    <button onclick="document.getElementById('new-billing-form').classList.toggle('hidden')"
+        class="bg-emerald-600 hover:bg-emerald-500 px-4 py-2 rounded-lg text-sm transition">+ Nova cobranca</button>
+</div>
+
+<!-- New billing form -->
+<form id="new-billing-form" class="hidden glass rounded-xl p-6 mb-6 space-y-4"
+    hx-post="/billings" hx-target="#billing-list" hx-swap="innerHTML"
+    hx-on::after-request="if(event.detail.successful) this.reset()">
+    <div class="grid md:grid-cols-2 gap-4">
+        <div>
+            <label class="block text-sm text-slate-400 mb-1">Cliente *</label>
+            <select name="client_id" required
+                class="w-full bg-slate-800 border border-slate-600 rounded-lg px-4 py-2 focus:border-emerald-500 focus:outline-none">
+                <option value="">Selecione...</option>
+                {% for c in clients %}
+                <option value="{{ c.id }}">{{ c.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            <label class="block text-sm text-slate-400 mb-1">Valor (R$) *</label>
+            <input type="text" name="amount" required placeholder="150,00"
+                class="w-full bg-slate-800 border border-slate-600 rounded-lg px-4 py-2 focus:border-emerald-500 focus:outline-none">
+        </div>
+        <div>
+            <label class="block text-sm text-slate-400 mb-1">Vencimento *</label>
+            <input type="date" name="due_date" required
+                class="w-full bg-slate-800 border border-slate-600 rounded-lg px-4 py-2 focus:border-emerald-500 focus:outline-none">
+        </div>
+        <div>
+            <label class="block text-sm text-slate-400 mb-1">Descricao</label>
+            <input type="text" name="description" placeholder="Ex: mensalidade abril"
+                class="w-full bg-slate-800 border border-slate-600 rounded-lg px-4 py-2 focus:border-emerald-500 focus:outline-none">
+        </div>
+    </div>
+    <button type="submit" class="bg-emerald-600 hover:bg-emerald-500 px-6 py-2 rounded-lg text-sm transition">Registrar</button>
+</form>
+
+<!-- Billing list -->
+<div id="billing-list">
+    {% include "partials/billing_list.html" %}
+</div>
+{% endblock %}

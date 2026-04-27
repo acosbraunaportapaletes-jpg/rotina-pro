@@ -1,71 +1,99 @@
 {% extends "base.html" %}
 {% block title %}Dashboard - RotinaPro{% endblock %}
 {% block content %}
-<div class="max-w-4xl mx-auto">
-    <h1 class="text-3xl font-bold mb-6">Dashboard</h1>
+<h1 class="text-2xl font-bold mb-6">Dashboard</h1>
 
-    <!-- Stats -->
-    <div class="grid grid-cols-3 gap-4 mb-8">
-        <div class="glass rounded-xl p-5 text-center">
-            <div class="text-3xl font-bold text-emerald-400">{{ playbooks | length }}</div>
-            <div class="text-sm text-slate-400 mt-1">Playbooks</div>
-        </div>
-        <div class="glass rounded-xl p-5 text-center">
-            <div class="text-3xl font-bold text-emerald-400">{{ done_items }}/{{ total_items }}</div>
-            <div class="text-sm text-slate-400 mt-1">Tarefas completas</div>
-        </div>
-        <div class="glass rounded-xl p-5 text-center">
-            <div class="text-3xl font-bold text-emerald-400">{{ progress }}%</div>
-            <div class="text-sm text-slate-400 mt-1">Progresso geral</div>
-        </div>
+<!-- Stats cards -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+    <div class="glass rounded-xl p-4 text-center">
+        <div class="text-3xl font-bold text-emerald-400">{{ total_clients }}</div>
+        <div class="text-sm text-slate-400">Clientes</div>
     </div>
-
-    <!-- Progress bar -->
-    <div class="glass rounded-xl p-4 mb-8">
-        <div class="flex items-center justify-between mb-2">
-            <span class="text-sm text-slate-400">Progresso de implementacao</span>
-            <span class="text-sm font-semibold text-emerald-400">{{ progress }}%</span>
-        </div>
-        <div class="w-full bg-slate-700 rounded-full h-3">
-            <div class="bg-emerald-500 h-3 rounded-full transition-all" style="width: {{ progress }}%"></div>
-        </div>
+    <div class="glass rounded-xl p-4 text-center">
+        <div class="text-3xl font-bold text-emerald-400">{{ month_revenue|brl }}</div>
+        <div class="text-sm text-slate-400">Faturamento do mes</div>
     </div>
+    <div class="glass rounded-xl p-4 text-center">
+        <div class="text-3xl font-bold {% if overdue_followups|length > 0 %}text-red-400{% else %}text-emerald-400{% endif %}">{{ overdue_followups|length }}</div>
+        <div class="text-sm text-slate-400">Follow-ups atrasados</div>
+    </div>
+    <div class="glass rounded-xl p-4 text-center">
+        <div class="text-3xl font-bold {% if overdue_billings|length > 0 %}text-red-400{% else %}text-emerald-400{% endif %}">{{ pending_billings_total|brl }}</div>
+        <div class="text-sm text-slate-400">Cobrancas pendentes</div>
+    </div>
+</div>
 
-    <!-- Playbooks list -->
-    <h2 class="text-xl font-bold mb-4">Seus Playbooks</h2>
-    {% if playbooks %}
-        <div class="space-y-3 mb-8">
-            {% for pb in playbooks %}
-            <a href="/playbook/{{ pb.id }}" class="glass rounded-xl p-5 flex items-center justify-between hover:border-emerald-500/50 transition block">
-                <div>
-                    <h3 class="font-semibold">{{ pb.title }}</h3>
-                    <span class="text-xs text-slate-400">{{ pb.niche | title }} &mdash; {{ pb.created_at }}</span>
+<div class="grid md:grid-cols-2 gap-6">
+    <!-- Overdue follow-ups -->
+    <div class="glass rounded-xl p-6">
+        <h2 class="text-lg font-semibold mb-4 flex items-center gap-2">
+            {% if overdue_followups|length > 0 %}
+                <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+            {% endif %}
+            Follow-ups atrasados
+        </h2>
+        {% if overdue_followups|length == 0 %}
+            <p class="text-slate-500 text-sm">Nenhum follow-up atrasado. Otimo!</p>
+        {% else %}
+            <div class="space-y-2">
+            {% for f in overdue_followups %}
+                <div class="flex items-center justify-between bg-red-900/20 border border-red-800/40 rounded-lg p-3 text-sm">
+                    <div>
+                        <span class="font-medium">{{ f.client_name }}</span>
+                        <span class="text-slate-400 ml-2">{{ f.due_date }}</span>
+                        {% if f.note %}<span class="text-slate-500 ml-2">- {{ f.note }}</span>{% endif %}
+                    </div>
+                    <button hx-post="/followups/{{ f.id }}/done" hx-target="closest div" hx-swap="outerHTML"
+                        class="bg-emerald-700 hover:bg-emerald-600 px-3 py-1 rounded text-xs transition">Feito</button>
                 </div>
-                <span class="text-emerald-400">&rarr;</span>
-            </a>
+            {% endfor %}
+            </div>
+        {% endif %}
+
+        {% if upcoming_followups|length > 0 %}
+        <h3 class="text-sm font-semibold mt-6 mb-3 text-slate-400">Proximos follow-ups</h3>
+        <div class="space-y-2">
+            {% for f in upcoming_followups %}
+            <div class="flex items-center justify-between bg-slate-800/50 rounded-lg p-3 text-sm">
+                <div>
+                    <span class="font-medium">{{ f.client_name }}</span>
+                    <span class="text-slate-400 ml-2">{{ f.due_date }}</span>
+                </div>
+                <button hx-post="/followups/{{ f.id }}/done" hx-target="closest div" hx-swap="outerHTML"
+                    class="bg-emerald-700 hover:bg-emerald-600 px-3 py-1 rounded text-xs transition">Feito</button>
+            </div>
             {% endfor %}
         </div>
-    {% else %}
-        <div class="glass rounded-xl p-8 text-center mb-8">
-            <p class="text-slate-400 mb-4">Voce ainda nao tem playbooks.</p>
-            <a href="/diagnostico" class="inline-block bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-3 rounded-lg transition">
-                Fazer diagnostico
-            </a>
-        </div>
-    {% endif %}
+        {% endif %}
+        <a href="/followups" class="text-emerald-400 text-sm hover:underline mt-4 inline-block">Ver todos &rarr;</a>
+    </div>
 
-    <!-- Quick links -->
-    <div class="grid md:grid-cols-2 gap-4">
-        <a href="/diagnostico" class="glass rounded-xl p-5 hover:border-emerald-500/50 transition block text-center">
-            <div class="text-2xl mb-2">&#x1f50d;</div>
-            <h3 class="font-semibold">Novo diagnostico</h3>
-            <p class="text-sm text-slate-400">Gerar outro playbook</p>
-        </a>
-        <a href="/templates" class="glass rounded-xl p-5 hover:border-emerald-500/50 transition block text-center">
-            <div class="text-2xl mb-2">&#x1f4cb;</div>
-            <h3 class="font-semibold">Templates</h3>
-            <p class="text-sm text-slate-400">Mensagens e prompts prontos</p>
-        </a>
+    <!-- Overdue billings -->
+    <div class="glass rounded-xl p-6">
+        <h2 class="text-lg font-semibold mb-4 flex items-center gap-2">
+            {% if overdue_billings|length > 0 %}
+                <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+            {% endif %}
+            Cobrancas vencidas
+        </h2>
+        {% if overdue_billings|length == 0 %}
+            <p class="text-slate-500 text-sm">Nenhuma cobranca vencida.</p>
+        {% else %}
+            <div class="space-y-2">
+            {% for b in overdue_billings %}
+                <div class="flex items-center justify-between bg-red-900/20 border border-red-800/40 rounded-lg p-3 text-sm">
+                    <div>
+                        <span class="font-medium">{{ b.client_name }}</span>
+                        <span class="text-slate-400 ml-2">{{ b.amount_cents|brl }}</span>
+                        <span class="text-slate-500 ml-2">venc. {{ b.due_date }}</span>
+                    </div>
+                    <button hx-post="/billings/{{ b.id }}/pay" hx-target="closest div" hx-swap="outerHTML"
+                        class="bg-emerald-700 hover:bg-emerald-600 px-3 py-1 rounded text-xs transition">Pago</button>
+                </div>
+            {% endfor %}
+            </div>
+        {% endif %}
+        <a href="/billings" class="text-emerald-400 text-sm hover:underline mt-4 inline-block">Ver todas &rarr;</a>
     </div>
 </div>
 {% endblock %}

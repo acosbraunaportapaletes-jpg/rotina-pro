@@ -1,0 +1,19 @@
+<div class="flex items-center justify-between glass rounded-lg p-3 text-sm" id="followup-{{ f.id }}">
+    <div class="flex items-center gap-3">
+        <span class="text-xs px-2 py-1 rounded
+            {% if f.status == 'done' %}bg-emerald-900/50 text-emerald-400
+            {% elif f.due_date < today %}bg-red-900/50 text-red-400
+            {% else %}bg-yellow-900/50 text-yellow-400{% endif %}">
+            {% if f.status == 'done' %}feito{% elif f.due_date < today %}atrasado{% else %}pendente{% endif %}
+        </span>
+        <span class="{% if f.status == 'done' %}line-through text-slate-500{% endif %}">
+            <strong>{{ f.client_name }}</strong>
+            <span class="text-slate-400 ml-1">{{ f.due_date }}</span>
+        </span>
+        {% if f.note %}<span class="text-slate-500 ml-2">- {{ f.note }}</span>{% endif %}
+    </div>
+    {% if f.status != 'done' %}
+    <button hx-post="/followups/{{ f.id }}/done" hx-target="#followup-{{ f.id }}" hx-swap="outerHTML"
+        class="bg-emerald-700 hover:bg-emerald-600 px-3 py-1 rounded text-xs transition whitespace-nowrap">Marcar feito</button>
+    {% endif %}
+</div>

@@ -1,12 +1,17 @@
-**Hook:**
-Você não precisa de mais funcionários — precisa parar de fazer trabalho que uma máquina faz melhor que você.
+**Hook + Post:**
 
-Semana passada conversei com um dono de loja que passava 3 horas por dia copiando dados de WhatsApp pra planilha, conferindo pagamentos no extrato e mandando mensagem de follow-up cliente por cliente. Ele achava que o próximo passo era contratar um assistente. O problema real? Ele estava fazendo o trabalho da máquina — e deixando de fazer o trabalho do dono.
+---
 
-Isso é mais comum do que parece. O pequeno empresário fica tão preso na operação que não consegue enxergar quais tarefas poderiam simplesmente sumir da rotina dele. Conciliação bancária, cobrança de inadimplente, relatório de vendas, agendamento de reunião — tudo isso roda no automático hoje com ferramentas que custam menos que um almoço por mês. Mas ninguém te mostra o caminho. Você pesquisa "automação para pequenas empresas" e cai num mar de conteúdo genérico que não tem nada a ver com a sua realidade de 3, 5, 8 funcionários operando na base do WhatsApp e da planilha.
+Você não precisa de mais funcionários — precisa parar de fazer trabalho que uma máquina faz melhor.
 
-Foi por isso que criamos o RotinaPro. Em menos de 5 minutos você responde um diagnóstico rápido sobre como opera hoje — e recebe de volta um mapa claro: quais tarefas estão te roubando tempo, quais ferramentas resolvem cada uma delas e playbooks prontos pra implementar ainda essa semana. Sem enrolação, sem curso de 40 horas, sem consultor cobrando R$ 5 mil pra te entregar um PDF bonito. É um plano de ação que cabe no seu bolso e no seu tempo.
+Semana passada conversei com o dono de uma loja de materiais elétricos. O cara fatura bem, tem 6 funcionários, mas toda segunda-feira ele chega às 7h pra "organizar a semana". Na prática, isso significa: abrir 3 planilhas, checar quem não pagou, mandar mensagem de cobrança no WhatsApp um por um, montar relatório de vendas pra saber o que repor. Quando ele termina, já é quase meio-dia. Cinco horas jogadas fora. Toda semana. Ele me disse: "Eu sei que é burrice, mas não tenho tempo de arrumar isso." E esse é exatamente o problema — você está ocupado demais fazendo o trabalho errado pra conseguir parar de fazer o trabalho errado.
 
-Aquele dono de loja? Automatizou o follow-up e a conciliação em dois dias. Hoje gasta 20 minutos onde gastava 3 horas. O resto do tempo ele usa pra vender — que é o que realmente faz o negócio crescer.
+Eu vejo esse padrão se repetir em todo pequeno negócio: agências que cobram cliente por e-mail copiando e colando texto, oficinas que controlam orçamento no caderno, prestadores de serviço que esquecem follow-up e perdem venda. Não é falta de competência. É falta de sistema. E quando alguém fala "sistema", o empresário já pensa em software caro, implementação de meses, consultoria. Aí desiste e volta pra planilha.
 
-Se você ainda está preso no operacional achando que a solução é contratar mais gente, me responde uma coisa: quanto vale a sua hora fazendo trabalho que um robô faz de graça?
+Foi por isso que criamos o RotinaPro. Você conecta em 5 minutos, escolhe o que quer automatizar — cobrança, follow-up, relatório, conciliação — e ele roda sozinho. Sem código, sem treinamento, sem consultor. O dono da loja de materiais? Hoje a segunda-feira dele começa às 9h. As cobranças saem sozinhas no domingo à noite. O relatório de reposição chega pronto no e-mail dele. Ele ganhou 5 horas por semana de volta. Multiplica isso por um ano: são mais de 250 horas. O equivalente a 6 semanas inteiras de trabalho.
+
+A pergunta que fica é simples: quantas horas por semana você está perdendo em tarefas que já poderiam rodar no automático — e o que você faria com esse tempo de volta?
+
+---
+
+(~1.680 caracteres)

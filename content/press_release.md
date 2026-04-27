@@ -1,29 +1,29 @@
-# RotinaPro Lança Plataforma que Diagnostica e Automatiza Rotinas de Pequenos Negócios em 5 Minutos
+# RotinaPro Chega ao Mercado Para Eliminar Tarefas Repetitivas de Pequenos Negócios
 
-**Ferramenta online gratuita identifica gargalos operacionais e entrega playbooks prontos para implementação imediata — sem necessidade de conhecimento técnico**
+**Plataforma permite automatizar follow-ups, cobranças e relatórios em apenas 5 minutos, sem conhecimento técnico**
 
 ---
 
-**São Paulo, 27 de abril de 2026** — A RotinaPro, startup brasileira de produtividade para pequenos negócios, anuncia o lançamento de sua plataforma de diagnóstico de automação voltada a empreendedores que ainda dependem de planilhas, anotações manuais e grupos de WhatsApp para gerenciar suas operações. A solução analisa a rotina do negócio por meio de um questionário rápido e entrega, em menos de cinco minutos, um relatório personalizado com playbooks de automação prontos para uso.
+**São Paulo, 27 de abril de 2026** — A RotinaPro, nova plataforma de automação voltada para micro e pequenas empresas, anuncia oficialmente seu lançamento no mercado brasileiro. A ferramenta foi desenvolvida para donos de negócios com 1 a 10 funcionários — como comércios, prestadores de serviço e agências — que perdem horas por semana com tarefas manuais e repetitivas. Com a RotinaPro, qualquer empresário pode configurar automações de follow-up com clientes, envio de cobranças e geração de relatórios em até 5 minutos, sem necessidade de conhecimento técnico.
 
-O Brasil conta com mais de 21 milhões de micro e pequenas empresas, que juntas respondem por quase 30% do PIB nacional. Apesar disso, a maioria desses negócios ainda opera com processos manuais e fragmentados: pedidos anotados em cadernos, controle financeiro em planilhas desatualizadas e atendimento ao cliente espalhado entre conversas de WhatsApp sem rastreamento. Segundo pesquisa do Sebrae, 62% dos pequenos empresários afirmam perder mais de duas horas por dia com tarefas repetitivas que poderiam ser automatizadas — mas não sabem por onde começar.
+Segundo pesquisa do Sebrae, microempreendedores brasileiros dedicam, em média, 12 horas semanais a atividades administrativas que poderiam ser automatizadas — tempo que deixa de ser investido em vendas, atendimento e crescimento do negócio. A RotinaPro nasce para resolver exatamente esse gargalo. A plataforma oferece modelos prontos de automação para os cenários mais comuns do dia a dia: lembrar o cliente sobre um orçamento pendente, enviar cobranças recorrentes por WhatsApp ou e-mail e gerar relatórios semanais de desempenho com um clique.
 
-A RotinaPro foi criada para resolver exatamente esse ponto de partida. Ao acessar a plataforma, o empreendedor responde a um diagnóstico guiado sobre áreas como atendimento, vendas, financeiro, estoque e gestão de equipe. O sistema cruza as respostas com uma base de mais de 200 playbooks validados e gera um plano de ação com passo a passo detalhado, ferramentas recomendadas (muitas gratuitas) e estimativa de tempo economizado por semana. Os playbooks cobrem desde automações simples — como respostas automáticas no WhatsApp Business e emissão de boletos recorrentes — até fluxos mais completos envolvendo integração entre plataformas como Google Sheets, Notion e sistemas de PDV.
+O diferencial da RotinaPro está na simplicidade. Enquanto ferramentas tradicionais de automação exigem integrações complexas e curva de aprendizado longa, a plataforma foi desenhada para quem não tem equipe de TI. A interface funciona no modelo "escolha, personalize e ative": o usuário seleciona um fluxo pronto, ajusta textos e horários conforme sua realidade e coloca a automação para rodar. A integração com WhatsApp Business, e-mail e as principais plataformas de pagamento do mercado já vem configurada de fábrica.
 
-O diferencial da RotinaPro é a abordagem prática e acessível. Não se trata de um software que exige implantação ou treinamento longo: o empreendedor recebe orientações que pode aplicar sozinho, no mesmo dia, com as ferramentas que já tem disponíveis.
+O plano inicial é gratuito para até 3 automações ativas, com planos pagos a partir de R$ 49/mês para negócios que precisam de maior volume e funcionalidades avançadas como relatórios personalizados e suporte prioritário.
 
-*"O pequeno empresário brasileiro não precisa de mais uma ferramenta — ele precisa de clareza sobre o que automatizar primeiro e como fazer isso sem parar a operação. A RotinaPro entrega esse mapa em minutos, não em semanas"*, afirma o fundador da empresa.
-
-O diagnóstico inicial é gratuito. A plataforma também oferece um plano premium com acompanhamento mensal, novos playbooks sob demanda e métricas de tempo economizado.
+"Pequeno empresário não precisa de mais uma ferramenta complicada. Ele precisa de algo que funcione no primeiro dia e devolva tempo para o que realmente importa: atender bem e vender mais. Foi isso que construímos com a RotinaPro", afirma o fundador da empresa.
 
 ---
 
 **Sobre a RotinaPro**
-A RotinaPro é uma plataforma brasileira de diagnóstico e automação operacional para micro e pequenas empresas. Sua missão é tornar a eficiência acessível a negócios de 1 a 10 funcionários, eliminando tarefas repetitivas com orientações práticas e ferramentas que o empreendedor já conhece. Saiba mais em rotinapro.com.br.
+
+A RotinaPro é uma plataforma brasileira de automação de rotinas comerciais e administrativas, criada especificamente para micro e pequenas empresas. Sua missão é democratizar o acesso à automação inteligente, permitindo que qualquer empreendedor — do dono de pet shop ao gestor de agência — profissionalize suas operações sem complexidade e sem custos elevados. Saiba mais em rotina.pro.
 
 ---
 
 **Contato para imprensa:**
+
 Assessoria de Comunicação — RotinaPro
-E-mail: imprensa@rotinapro.com.br
+E-mail: imprensa@rotina.pro
 Telefone: (11) 0000-0000

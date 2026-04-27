@@ -1,0 +1,20 @@
+<div class="flex items-center justify-between glass rounded-lg p-3 text-sm" id="billing-{{ b.id }}">
+    <div class="flex items-center gap-3">
+        <span class="text-xs px-2 py-1 rounded
+            {% if b.status == 'paid' %}bg-emerald-900/50 text-emerald-400
+            {% elif b.due_date < today %}bg-red-900/50 text-red-400
+            {% else %}bg-yellow-900/50 text-yellow-400{% endif %}">
+            {% if b.status == 'paid' %}pago{% elif b.due_date < today %}vencido{% else %}pendente{% endif %}
+        </span>
+        <span class="{% if b.status == 'paid' %}line-through text-slate-500{% endif %}">
+            <strong>{{ b.client_name }}</strong>
+            <span class="text-emerald-400 ml-1">{{ b.amount_cents|brl }}</span>
+            <span class="text-slate-400 ml-1">venc. {{ b.due_date }}</span>
+        </span>
+        {% if b.description %}<span class="text-slate-500 ml-2">- {{ b.description }}</span>{% endif %}
+    </div>
+    {% if b.status != 'paid' %}
+    <button hx-post="/billings/{{ b.id }}/pay" hx-target="#billing-{{ b.id }}" hx-swap="outerHTML"
+        class="bg-emerald-700 hover:bg-emerald-600 px-3 py-1 rounded text-xs transition whitespace-nowrap">Marcar pago</button>
+    {% endif %}
+</div>

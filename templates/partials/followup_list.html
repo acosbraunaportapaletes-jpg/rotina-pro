@@ -1,0 +1,11 @@
+{% if followups|length == 0 %}
+    <div class="glass rounded-xl p-8 text-center">
+        <p class="text-slate-400">Nenhum follow-up encontrado.</p>
+    </div>
+{% else %}
+<div class="space-y-2">
+    {% for f in followups %}
+        {% include "partials/followup_row.html" %}
+    {% endfor %}
+</div>
+{% endif %}

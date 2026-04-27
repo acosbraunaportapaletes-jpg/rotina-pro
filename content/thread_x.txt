@@ -1,32 +1,32 @@
-Aqui está a thread:
+Here's the thread:
 
 ---
 
 **1/8**
-Eu perdia 3 horas por dia fazendo conciliação, cobrando cliente e montando relatório no Google Sheets. Até que mapeei exatamente quais tarefas podiam sumir da minha rotina. O método que usei cabe em 5 minutos.
+Semana passada um dono de loja me mostrou 14 abas de planilha abertas. Uma pra cobranças, outra pra follow-up, outra pra relatório. Ele gasta 6h por semana só nisso. Se você se identificou, lê essa thread.
 
 **2/8**
-O problema não é falta de ferramenta. É o contrário: tem Zapier, Make, CRM, ERP, chatbot — e você não sabe por onde começar. Aí continua no WhatsApp e na planilha, apagando incêndio todo dia.
+O problema não é falta de organização. É que pequeno negócio com 1-10 funcionários não tem sistema — tem gambiarra. Planilha no Google, lembrete no WhatsApp, anotação em caderno. Funciona até o dia que não funciona.
 
 **3/8**
-A real é que 80% das tarefas repetitivas de um pequeno negócio se resolvem com 3 ou 4 automações simples. Você só precisa saber quais são as suas.
+Follow-up esquecido = cliente perdido. Cobrança atrasada = caixa no vermelho. Relatório feito na correria = decisão errada. Tudo isso por tarefas que se repetem toda semana e ninguém automatizou.
 
 **4/8**
-Foi pra isso que criei o RotinaPro. Você responde um diagnóstico rápido sobre sua operação e recebe playbooks prontos — passo a passo — das automações que fazem sentido pro seu negócio.
+O RotinaPro resolve isso em 5 minutos. Você configura uma vez e ele roda sozinho: follow-ups automáticos, cobranças no prazo e relatórios prontos sem abrir uma planilha sequer.
 
 **5/8**
-Não é curso. Não é consultoria de 10 reuniões. É um diagnóstico direto que te mostra: essa tarefa aqui você automatiza com isso, dessa forma, hoje.
+Funciona pra comércio, serviços, agências. Qualquer negócio que vive de cobrar cliente, acompanhar pedido e prestar conta no fim do mês. Sem curva de aprendizado, sem setup complicado.
 
 **6/8**
-Funciona pra comércio, prestador de serviço, agência pequena. Se você tem de 1 a 10 funcionários e ainda opera no modo manual, foi feito pra você.
+A conta é simples: 6h por semana em tarefa repetitiva = 24h por mês. É quase um funcionário inteiro dedicado a copiar e colar dados entre abas. Esse tempo volta pra vender, atender e crescer.
 
 **7/8**
-Follow-up de cliente, conciliação financeira, envio de relatório, cobrança — cada playbook te entrega a ferramenta certa e o fluxo montado. Sem enrolação 🔧
+Não é sobre trocar planilha por software bonito. É sobre parar de perder dinheiro com o que deveria rodar no automático 🔄
 
 **8/8**
-Quer recuperar horas da sua semana começando hoje? Acessa o link e faz seu diagnóstico agora 👇
-https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=197881458-3d0e2fb1-5a1d-401e-91dc-6282069c3557
+Se você quer testar o RotinaPro e recuperar essas horas da sua semana, o link tá aqui 👇
+https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=197881458-f7425f8d-d585-425f-8ffc-1fdba7ce3167
 
 ---
 
-Todos dentro do limite de 280 caracteres, 2 emojis no total, sem hashtags, com hook real no primeiro e CTA com link no último.
+Todos os tweets estão dentro do limite de 280 caracteres, com no máximo 2 emojis na thread inteira e sem hashtags.

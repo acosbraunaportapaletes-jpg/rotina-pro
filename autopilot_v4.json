@@ -1,0 +1,461 @@
+{
+  "version": "v4",
+  "slug": "rotina-pro",
+  "started_at": "2026-04-27T11:00:19.075544+00:00",
+  "finished_at": "2026-04-27T11:22:46.592516+00:00",
+  "target_dir": "G:\\Meu Drive\\bot24h_shared\\saas_builds\\rotina-pro",
+  "verdict": "CAUTION",
+  "name": "RotinaPro",
+  "pitch": "Diagnóstico de automação + playbooks prontos pra seu negócio em 5 min",
+  "format": "prompt_pack",
+  "price_brl": 37.0,
+  "stages": {
+    "format": {
+      "formato_escolhido": "prompt_pack",
+      "justificativa": "O diferencial central é diagnóstico + prompts de IA por tipo de negócio — o formato prompt_pack entrega exatamente isso de forma actionable, diferente do ebook genérico",
+      "ticket_sugerido_brl": 37,
+      "nome_comercial": "AutoPilot Prompts PME",
+      "slug": "autopilot-prompts-pme",
+      "entregavel_principal": "Pack com 50+ prompts de IA organizados por processo (financeiro, vendas, atendimento, relatórios) com diagnóstico inicial para o dono identificar quais usar primeiro",
+      "bonus_sugestao": "Planilha-diagnóstico editável onde o dono marca suas tarefas repetitivas e recebe automaticamente quais prompts usar",
+      "upsell_futuro": "V2 com prompts específicos por nicho (restaurante, salão, agência, loja) + templates Notion de fluxo integrado",
+      "format_meta": {
+        "label": "Pack de Prompts Claude/GPT",
+        "ticket_brl": [
+          19,
+          97
+        ],
+        "tempo_build_min": 5,
+        "indicador": "ideia é uso inteligente de IA por nicho"
+      }
+    },
+    "alt_build": {
+      "ok": true,
+      "json": "G:\\Meu Drive\\bot24h_shared\\saas_builds\\rotina-pro\\rotina-pro.json",
+      "md": "G:\\Meu Drive\\bot24h_shared\\saas_builds\\rotina-pro\\rotina-pro.md",
+      "n_prompts": 0
+    },
+    "visuals": {
+      "logo": "visuals\\logo.png",
+      "cover": "visuals\\cover.png",
+      "og_image": "visuals\\og_image.png",
+      "mockup_tablet": "visuals\\mockup_tablet.png",
+      "beneficio_tempo": "visuals\\beneficio_tempo.png",
+      "kit_arquivos": "visuals\\kit_arquivos.png",
+      "workflow_7_passos": "visuals\\workflow_7_passos.png",
+      "selo_garantia": "visuals\\selo_garantia.png",
+      "grafico_crescimento": "visuals\\grafico_crescimento.png",
+      "cnpj_auto": "visuals\\cnpj_auto.png",
+      "call_to_action": "visuals\\call_to_action.png",
+      "depoimentos": "visuals\\depoimentos.png",
+      "mockup_celular": "visuals\\mockup_celular.png",
+      "ferramentas": "visuals\\ferramentas.png",
+      "checklist_visual": "visuals\\checklist_visual.png"
+    },
+    "payment_link": {
+      "ok": true,
+      "preference_id": "197881458-3d0e2fb1-5a1d-401e-91dc-6282069c3557",
+      "url": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=197881458-3d0e2fb1-5a1d-401e-91dc-6282069c3557",
+      "sandbox_url": "https://sandbox.mercadopago.com.br/checkout/v1/redirect?pref_id=197881458-3d0e2fb1-5a1d-401e-91dc-6282069c3557",
+      "test_mode": false,
+      "external_reference": "rotina-pro"
+    },
+    "landing_v2": {
+      "ok": true
+    },
+    "content_pack_v2": {
+      "files": {
+        "thread_x": "content\\thread_x.txt",
+        "thread_linkedin": "content\\thread_linkedin.txt",
+        "newsletter": "content\\newsletter.md",
+        "email_launch": "content\\email_launch.md",
+        "seo_article": "content\\seo_article.md",
+        "ad_copy": "content\\ad_copy.md",
+        "product_hunt": "content\\product_hunt.md",
+        "reddit_post": "content\\reddit_post.md",
+        "press_release": "content\\press_release.md",
+        "image_prompt": "content\\image_prompt.txt"
+      },
+      "content_dir": "G:\\Meu Drive\\bot24h_shared\\saas_builds\\rotina-pro\\content"
+    },
+    "deployment": {
+      "steps": [
+        {
+          "stage": "git_commit",
+          "ok": true,
+          "stdout": "[main (root-commit) 8a82c3f] initial build: rotina-pro\n 42 files changed, 1679 insertions(+)\n create mode 100644 .env.example\n create mode 100644 .gitignore\n create mode 100644 README.md\n create mode 100644 app.py\n create mode 100644 content/ad_copy.md\n create mode 100644 content/email_launch.md\n create mode 100644 content/image_prompt.txt\n create mode 100644 content/newsletter.md\n create mode 100644 content/press_release.md\n create mode 100644 content/product_hunt.md\n create mode 100644 content/reddit_post.md\n create mode 100644 content/seo_article.md\n create mode 100644 content/thread_linkedin.txt\n create mode 100644 content/thread_x.txt\n create mode 100644 landing.html\n create mode 100644 meta.json\n create mode 100644 requirements.txt\n create mode 100644 rotina-pro.json\n create mode 100644 rotina-pro.md\n create mode 100644 templates/base.html\n create mode 100644 templates/dashboard.html\n create mode 100644 templates/diagnostic.html\n create mode 100644 templates/index.html\n create mode 100644 templates/login.html\n create mode 100644 templates/playbook.html\n create mode 100644 templates/template_view.html\n create mode 100644 templates/templates.html\n create mode 100644 visuals/beneficio_tempo.png\n create mode 100644 visuals/call_to_action.png\n create mode 100644 visuals/checklist_visual.png\n create mode 100644 visuals/cnpj_auto.png\n create mode 100644 visuals/cover.png\n create mode 100644 visuals/depoimentos.png\n create mode 100644 visuals/ferramentas.png\n create mode 100644 visuals/grafico_crescimento.png\n create mode 100644 visuals/kit_arquivos.png\n create mode 100644 visuals/logo.png\n create mode 100644 visuals/mockup_celular.png\n create mode 100644 visuals/mockup_tablet.png\n create mode 100644 visuals/og_image.png\n create mode 100644 visuals/selo_garantia.png\n create mode 100644 visuals/workflow_7_passos.png",
+          "stderr": ""
+        },
+        {
+          "stage": "github_push",
+          "ok": true,
+          "repo_url": "https://github.com/acosbraunaportapaletes-jpg/rotina-pro",
+          "clone_url": "https://github.com/acosbraunaportapaletes-jpg/rotina-pro.git"
+        },
+        {
+          "stage": "vercel",
+          "ok": false,
+          "reason": "PROJECT_CREATE",
+          "detail": {
+            "error": {
+              "code": "bad_request",
+              "message": "Failed to link acosbraunaportapaletes-jpg/rotina-pro. You need to add a Login Connection to your GitHub account first.",
+              "action": "Add a Login Connection",
+              "link": "https://vercel.com/docs/accounts/create-an-account#login-methods-and-connections",
+              "repo": "acosbraunaportapaletes-jpg/rotina-pro"
+            }
+          }
+        }
+      ],
+      "repo_url": "https://github.com/acosbraunaportapaletes-jpg/rotina-pro",
+      "expected_url": null,
+      "ok": true
+    },
+    "deep_intel": {
+      "ok": true,
+      "queries_analisadas": 3
+    },
+    "deep_debate": {
+      "agent_opinions": {
+        "User": {
+          "score": 5,
+          "veredito": "CAUTION",
+          "principal_insight": "O ICP sente a dor mas já resolve 'bem o suficiente' com alternativas gratuitas (ChatGPT + templates + YouTube), o que torna o willingness-to-pay real muito frágil para um info-produto genérico.",
+          "red_flags": [
+            "Compra única de R$19-47 exige volume altíssimo de vendas para ser viável — CAC facilmente ultrapassa o ticket",
+            "O cliente típico (dono de negócio 1-10 func) não se identifica como 'precisando de automação' — ele busca resolver a dor pontual (ex: cobrar cliente), não comprar um sistema",
+            "Concorrência gratuita é forte demais: Sebrae, YouTube, ChatGPT resolvem 80% do que um guia estático entregaria"
+          ],
+          "green_flags": [
+            "A dor é real e recorrente — pequeno empresário de fato perde horas em tarefas operacionais que poderiam ser automatizadas",
+            "Existe gap claro entre 'conteúdo genérico gratuito' e 'diagnóstico personalizado do processo' que ninguém empacota bem",
+            "Demanda de busca confirmada em 2/3 queries sugere interesse ativo no tema"
+          ],
+          "recommendation": "Pivote de info-produto estático para diagnóstico interativo (quiz/ferramenta) que entrega plano personalizado — isso justifica recorrência (R$29-49/mês) e se diferencia do conteúdo gratuito genérico.",
+          "weight": 0.2,
+          "emoji": "🎯"
+        },
+        "Engineer": {
+          "score": 8,
+          "veredito": "GO",
+          "principal_insight": "Info-produto de compra única é o formato mais simples de entregar — zero backend, zero manutenção de software, o 'produto' é conteúdo empacotado (PDF/vídeos/templates), não código.",
+          "red_flags": [
+            "Sem recorrência de receita — cada cliente paga uma vez, exigindo aquisição constante de novos compradores",
+            "Conteúdo sobre automação envelhece rápido (ferramentas mudam, preços mudam, APIs mudam) — requer atualização periódica para não virar lixo em 6 meses",
+            "Diferenciação frágil — a barreira entre 'mais um curso de automação' e 'sistema de diagnóstico + implementação' depende 100% da qualidade do copywriting e do framework proprietário"
+          ],
+          "green_flags": [
+            "Complexidade técnica quase zero — landing page + checkout (Hotmart/Kiwify) + entrega digital, literalmente deployável em 2-3 dias sobrando tempo para o conteúdo",
+            "Zero manutenção de infraestrutura — não tem banco de dados, não tem servidor, não tem bug de produção às 3h da manhã",
+            "Escopo fechado e claro — o deliverable é finito (guia + templates + checklists), sem feature creep nem roadmap infinito"
+          ],
+          "recommendation": "Executa em 5 dias: D1-D2 monta o framework de diagnóstico e os templates, D3 grava/escreve o conteúdo core, D4 sobe landing page + checkout, D5 testa funil e lança — o risco não é técnico, é de posicionamento, então invista o tempo economizado em copy e validação de oferta.",
+          "weight": 0.15,
+          "emoji": "🔧"
+        },
+        "Risk": {
+          "score": 5,
+          "veredito": "CAUTION",
+          "principal_insight": "O risco binário que mata o produto é a comoditização instantânea: qualquer pessoa com ChatGPT pode gerar conteúdo equivalente em minutos, e o comprador percebe isso antes ou depois da compra — matando recompra e reputação.",
+          "red_flags": [
+            "Barreira de entrada ZERO — concorrente copia o produto inteiro em 1 tarde com IA generativa, criando race-to-bottom de preço inevitável",
+            "Compra única a R$19-47 significa que o LTV é o próprio ticket; sem recorrência, você precisa de aquisição perpétua de novos clientes — CAC come a margem rápido",
+            "Dependência frágil de plataformas de venda (Hotmart/Kiwify) + tráfego pago: qualquer mudança de algoritmo, política ou aumento de CPC quebra o unit economics de um produto sub-R$50"
+          ],
+          "green_flags": [
+            "Risco financeiro pessoal é baixo — produto digital sem estoque, investimento inicial mínimo, erro é reversível",
+            "Demanda validada em 2 de 3 queries indica que a dor existe e é buscada ativamente",
+            "Ticket baixo reduz fricção de compra — conversão tende a ser mais alta se o copy acertar a dor específica"
+          ],
+          "recommendation": "Só avance se tiver um canal orgânico próprio (audiência, lista, comunidade) que zere o CAC; caso contrário, o modelo compra-única + tráfego pago em ticket sub-R$50 é matematicamente frágil — considere pivotar para assinatura ou usar o info-produto como isca para um serviço recorrente de maior valor.",
+          "weight": 0.2,
+          "emoji": "⚠️"
+        },
+        "CFO": {
+          "score": 5,
+          "veredito": "CAUTION",
+          "principal_insight": "Com ticket médio de R$33 (ponto médio 19-47) e compra única, o CAC precisa ficar abaixo de R$10-12 para ter margem saudável — viável só com orgânico forte ou ads extremamente otimizados em público quente.",
+          "red_flags": [
+            "Compra única mata o LTV — sem recorrência, cada cliente vale apenas R$19-47 e você precisa adquirir novos clientes infinitamente para manter receita",
+            "CAC em ads para público PME no Brasil gira em R$15-35 por conversão em info-produto barato, o que pode gerar ROI negativo ou break-even impossível só com tráfego pago",
+            "Concorrência gratuita forte (Sebrae, ChatGPT, templates) pressiona o willingness-to-pay pra baixo num produto que já tem ticket baixo"
+          ],
+          "green_flags": [
+            "Custo de construção próximo de zero (info-produto digital) — margem bruta acima de 90% se o CAC for controlado",
+            "Demanda validada em 2 de 3 queries reduz risco de construir algo que ninguém procura",
+            "Ticket baixo (sub-R$50) tem conversão por impulso — funil curto, sem necessidade de nutrição longa"
+          ],
+          "recommendation": "Só avance se incluir upsell ou recorrência (ex: comunidade mensal R$19/mês ou pacote premium R$97) — sem segundo produto no funil, o unit economics de compra única com ads pago não fecha.",
+          "weight": 0.25,
+          "emoji": "💼"
+        },
+        "Growth": {
+          "score": 6,
+          "veredito": "CAUTION",
+          "principal_insight": "O canal de aquisição mais barato é tráfego orgânico no YouTube/Reels mostrando 'antes e depois' de rotinas caóticas vs. automatizadas, mas o loop viral é fraco porque pequeno empresário não compartilha publicamente que estava desorganizado.",
+          "red_flags": [
+            "Info-produto de compra única mata o LTV — sem recorrência, cada cliente custa aquisição nova e você vive na esteira de lançamento perpétuo",
+            "Loop viral quase inexistente: dono de pequeno negócio não posta 'comprei um guia de automação' — não há gatilho social natural de compartilhamento",
+            "Ticket de R$19-47 exige volume alto; CAC no Meta/Google para público 'pequeno empresário' já está inflacionado por Sebrae, contabilidades e SaaS competindo pelo mesmo leilão"
+          ],
+          "green_flags": [
+            "Dor real e frequente — o público busca ativamente por soluções (demanda confirmada em 2/3 queries), o que favorece SEO e YouTube como canais orgânicos",
+            "Conteúdo 'diagnóstico + prescrição' gera lead magnet forte: quiz 'Quanto tempo você perde por semana?' converte bem em captura de e-mail antes da venda",
+            "Baixo custo de produção permite testar rápido com mini-lançamento via WhatsApp para validar conversão antes de escalar"
+          ],
+          "recommendation": "Antes de escalar, adicione um upsell recorrente (comunidade com templates atualizados ou consultoria em grupo mensal a R$29/mês) — sem isso, o unit economics de aquisição não fecha com ticket único de R$19-47.",
+          "weight": 0.2,
+          "emoji": "📈"
+        }
+      },
+      "consolidated": {
+        "final_score": 5.6,
+        "variance": 3,
+        "consenso": "medio",
+        "veredito_final": "CAUTION",
+        "synthesis_insight": "A dor é real e validada, mas o modelo compra-única a ticket sub-R$50 sem recorrência nem canal orgânico próprio é matematicamente frágil — o produto só sobrevive como porta de entrada para um funil com upsell recorrente.",
+        "top_risk": "Comoditização instantânea por IA generativa + unit economics quebrado (CAC > ticket) em modelo de compra única sem LTV de recorrência.",
+        "top_opportunity": "Gap real entre conteúdo gratuito genérico e diagnóstico personalizado de processos — quem empacotar isso como ferramenta interativa (quiz + plano sob medida) cria diferenciação difícil de copiar.",
+        "action_recommended": "Pivote para modelo freemium: use o quiz-diagnóstico gratuito como lead magnet, venda o guia personalizado como entrada (R$47) e monetize de verdade com comunidade/consultoria em grupo recorrente (R$29-49/mês) — valide conversão do funil completo com 100 leads orgânicos via WhatsApp antes de investir em ads."
+      },
+      "n_agents": 5
+    },
+    "memory_lookup": {
+      "found_similar": 0
+    },
+    "deliverable_pdf": {
+      "ok": true,
+      "pdf_path": "G:\\Meu Drive\\bot24h_shared\\saas_builds\\rotina-pro\\deliverables\\RotinaPro.pdf",
+      "size_kb": 15
+    },
+    "listings": {
+      "gumroad": {
+        "ok": true,
+        "product_id": "mb7Boki4XCRtpJAdXNbGqg==",
+        "name": "RotinaPro",
+        "short_url": "https://nathanfer0.gumroad.com/l/rotina-pro",
+        "custom_permalink": "rotina-pro",
+        "edit_url": "https://nathanfer0.gumroad.com/products/mb7Boki4XCRtpJAdXNbGqg==",
+        "published": true,
+        "gh_download_url": null
+      },
+      "mp_payment_link": {
+        "ok": true,
+        "preference_id": "197881458-2656d190-6564-4307-abdf-97610daa7219",
+        "url": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=197881458-2656d190-6564-4307-abdf-97610daa7219",
+        "sandbox_url": "https://sandbox.mercadopago.com.br/checkout/v1/redirect?pref_id=197881458-2656d190-6564-4307-abdf-97610daa7219",
+        "test_mode": false,
+        "external_reference": "rotina-pro"
+      },
+      "kiwify": {
+        "ok": true,
+        "note": "draft gerado",
+        "file": "G:\\Meu Drive\\bot24h_shared\\saas_builds\\rotina-pro\\listings\\kiwify_draft.md"
+      },
+      "eduzz": {
+        "ok": true,
+        "note": "draft gerado",
+        "file": "G:\\Meu Drive\\bot24h_shared\\saas_builds\\rotina-pro\\listings\\eduzz_draft.md"
+      },
+      "hotmart": {
+        "ok": true,
+        "note": "draft gerado",
+        "file": "G:\\Meu Drive\\bot24h_shared\\saas_builds\\rotina-pro\\listings\\hotmart_draft.md"
+      },
+      "mercadolivre": {
+        "ok": false,
+        "api_error": {
+          "message": "Validation error",
+          "error": "validation_error",
+          "status": 400,
+          "cause": [
+            {
+              "department": "structured-data",
+              "cause_id": 3705,
+              "type": "error",
+              "code": "item.title.minimum_length",
+              "references": [
+                "item.title"
+              ],
+              "message": "Inclua características importantes do produto, como marca, modelo ou categoria."
+            },
+            {
+              "department": "items",
+              "cause_id": 363,
+              "type": "warning",
+              "code": "item.attribute.dropped",
+              "references": [
+                "item.attributes"
+              ],
+              "message": "Attribute: GTIN was dropped because its values is empty"
+            }
+          ]
+        },
+        "fallback_draft": "G:\\Meu Drive\\bot24h_shared\\saas_builds\\rotina-pro\\listings\\mercadolivre_draft.md"
+      }
+    },
+    "outreach": {
+      "ok": false,
+      "reason": "NO_CANDIDATES"
+    },
+    "memory": {
+      "ok": true,
+      "recorded": true
+    },
+    "debate": {
+      "agent_opinions": {
+        "Engineer": {
+          "score": 8,
+          "veredito": "GO",
+          "principal_insight": "Prompt pack é o formato mais simples que existe para entregar — são arquivos de texto estruturados, zero infraestrutura, zero manutenção de software.",
+          "red_flags": [
+            "Risco de parecer genérico demais se os playbooks não forem segmentados por nicho (comércio vs agência vs serviços)",
+            "Sem barreira técnica: qualquer concorrente copia o formato em dias",
+            "Dependência de plataforma terceira (ChatGPT/Claude) — se mudar output do modelo, playbook pode ficar inconsistente"
+          ],
+          "green_flags": [
+            "Complexidade técnica próxima de zero: é curadoria de prompts + lógica de diagnóstico em texto — entrega em 2-3 dias, não 1 semana",
+            "Manutenção trivial: atualizar prompts é editar texto, não deploy de código — qualquer pessoa faz",
+            "Formato prompt_pack elimina necessidade de backend, auth, banco de dados, hosting — custo operacional R$0"
+          ],
+          "recommendation": "Construa o MVP em 2 dias com 3 nichos-piloto (comércio, serviços, agência), cada um com diagnóstico de 10 perguntas + 5 playbooks prontos — lance rápido e use feedback real pra decidir se expande nichos.",
+          "weight": 0.15,
+          "emoji": "🔧"
+        },
+        "User": {
+          "score": 6,
+          "veredito": "CAUTION",
+          "principal_insight": "O cliente sente a dor mas não sabe nomear 'automação' como solução — o gap entre consciência do problema e busca ativa por esse tipo de produto é real e dificulta aquisição orgânica.",
+          "red_flags": [
+            "ICP 'dono de pequeno negócio' é amplo demais — um dono de salão, um dono de e-commerce e um dono de agência têm processos completamente diferentes, e playbooks genéricos perdem credibilidade rápido",
+            "Willingness-to-pay de R$37 exige volume alto, mas esse público não busca 'diagnóstico de automação' no Google — o intent de busca não existe naturalmente",
+            "ChatGPT gratuito já entrega 80% do valor percebido se o usuário souber fazer 2-3 perguntas certas — a barreira de switching é quase zero"
+          ],
+          "green_flags": [
+            "Dor genuína e frequente — horas perdidas em operacional é queixa universal de pequeno empresário",
+            "Preço de R$37 é impulso, elimina objeção financeira e permite teste rápido de mercado",
+            "Formato 'diagnóstico + playbook pronto' entrega valor imediato vs cursos que exigem horas de consumo"
+          ],
+          "recommendation": "Nichar brutalmente em UM segmento (ex: donos de barbearia ou donos de agência de marketing) com linguagem e exemplos específicos deles — isso resolve o problema de aquisição e diferencia do ChatGPT genérico.",
+          "weight": 0.2,
+          "emoji": "🎯"
+        },
+        "CFO": {
+          "score": 6,
+          "veredito": "CAUTION",
+          "principal_insight": "A R$37 de ticket único, você precisa de CAC abaixo de R$12-15 para ter margem saudável, o que é apertado em Meta/Google para público PME sem funil de upsell.",
+          "red_flags": [
+            "Ticket único de R$37 sem recorrência zera o LTV — sem upsell estruturado, cada cliente é uma aquisição nova",
+            "CAC para público 'dono de pequeno negócio' em paid media gira R$18-35 (nicho amplo, baixa intent de compra digital), comendo 50-90% da receita bruta",
+            "Payback depende 100% de volume — margem unitária de ~R$20-22 (após gateway+impostos) exige escala alta pra cobrir custo de construção + ads"
+          ],
+          "green_flags": [
+            "Custo de construção próximo de zero (prompt pack = baixo COGS, sem infraestrutura pesada), break-even de desenvolvimento em ~50-80 vendas",
+            "Produto de entrega instantânea — margem bruta alta (~85-90%) após custos de plataforma",
+            "Preço no sweet spot de compra impulsiva (sub-R$50), o que favorece conversão em tráfego quente orgânico"
+          ],
+          "recommendation": "Só é GO se você validar CAC < R$15 nos primeiros R$500 de ads E desenhar um upsell de R$97-197 (implementação assistida ou assinatura de novos playbooks) para elevar LTV para pelo menos 2.5x o CAC.",
+          "weight": 0.25,
+          "emoji": "💼"
+        },
+        "Risk": {
+          "score": 6,
+          "veredito": "CAUTION",
+          "principal_insight": "O risco binário que mata o produto é a comoditização instantânea: qualquer pessoa com ChatGPT pode replicar 'diagnóstico + playbook de automação' em minutos, e o público-alvo já está a um prompt de distância da sua entrega.",
+          "red_flags": [
+            "Barreira de entrada ZERO — concorrente literal é o ChatGPT gratuito que o próprio cliente já usa; a diferença entre 'prompt pack' e 'pergunta bem feita ao GPT' é tênue demais pra justificar R$37 repetidamente no mercado",
+            "Dependência frágil de percepção de valor: playbooks genéricos perdem relevância rápido; se o cliente abre o material e sente que 'poderia ter feito sozinho', o reembolso e boca-a-boca negativo matam o funil",
+            "Ciclo de vida curto sem recorrência — compra única de R$37 exige volume alto e constante de novos compradores; CAC em tráfego pago pra pequeno empresário brasileiro facilmente come a margem inteira"
+          ],
+          "green_flags": [
+            "Preço de impulso (R$37) reduz fricção de compra e permite teste rápido de mercado com baixo investimento inicial",
+            "Dor real e validada — pequeno empresário de fato perde horas em operacional repetitivo e não sabe por onde começar a automatizar",
+            "Formato 'diagnóstico personalizado' tem apelo emocional forte ('feito pra mim') se a execução do posicionamento for boa"
+          ],
+          "recommendation": "Só vá se conseguir blindar contra a comoditização: inclua um componente interativo ou customizado (ex: quiz que gera output único por nicho/ferramenta que o cliente já usa) — sem isso, é commodity de R$37 com shelf-life de 6 meses antes de virar conteúdo gratuito de blog.",
+          "weight": 0.2,
+          "emoji": "⚠️"
+        },
+        "Growth": {
+          "score": 7,
+          "veredito": "GO",
+          "principal_insight": "O canal mais barato é Reels/TikTok com antes/depois de rotina operacional caótica vs. automatizada — pequeno empresário consome esse formato e compartilha com sócios e pares.",
+          "red_flags": [
+            "Loop viral fraco: diagnóstico é pessoal e privado, não há incentivo natural pra compartilhar resultado publicamente",
+            "CAC pode subir rápido porque 'automação pra pequeno negócio' é nicho disputado por influencers de produtividade e IA",
+            "Repeat purchase inexistente a R$37 compra única — sem upsell claro, LTV morre no primeiro ticket"
+          ],
+          "green_flags": [
+            "R$37 é impulso: converte direto no orgânico sem funil longo — taxa de conversão tende a ser alta com copy de 'diagnóstico em 5 min'",
+            "Canal orgânico validável rápido: um único Reels mostrando o diagnóstico rodando já testa demanda com R$0 de ad spend",
+            "Potencial de criar loop viral artificial: incluir um 'score de automação' compartilhável (ex: 'Seu negócio está 23% automatizado') gera screenshot social e comparação entre pares"
+          ],
+          "recommendation": "Embuta um score/resultado visual compartilhável no diagnóstico e adicione um upsell de implementação (consultoria async ou pack avançado R$97-197) para não morrer no ticket único.",
+          "weight": 0.2,
+          "emoji": "📈"
+        }
+      },
+      "consolidated": {
+        "final_score": 6.55,
+        "variance": 2,
+        "consenso": "medio",
+        "veredito_final": "CAUTION",
+        "synthesis_insight": "A dor é real e o produto é trivial de construir, mas a R$37 sem recorrência e com barreira zero contra comoditização, o negócio só sobrevive se resolver o problema de LTV antes de escalar aquisição.",
+        "top_risk": "Comoditização instantânea — o concorrente direto é o ChatGPT gratuito, e sem componente customizado ou interativo o produto vira commodity com shelf-life de meses.",
+        "top_opportunity": "Custo de construção próximo de zero com margem bruta de ~85-90%, permitindo validação real de mercado com investimento mínimo em 2-3 dias.",
+        "action_recommended": "Nichar em UM segmento específico (ex: barbearias ou agências), embutir quiz interativo que gera score compartilhável, e desenhar upsell de R$97-197 (implementação assistida) ANTES de gastar R$1 em ads — valide organicamente com Reels mostrando o diagnóstico rodando e só escale se CAC orgânico-equivalente ficar abaixo de R$15."
+      },
+      "n_agents": 5
+    },
+    "web_intel": {
+      "query": "RotinaPro Qual a tarefa mais repetitiva ou chata do seu negócio que ainda não tem boa solu",
+      "generated_at": "2026-04-27T11:22:46.468513+00:00",
+      "web_results_count": 0,
+      "reddit_results_count": 10,
+      "hn_results_count": 0,
+      "reddit_engagement_total": 22238,
+      "reddit_recent_90d_count": 4,
+      "hn_total_points": 0,
+      "pain_signals_count": 0,
+      "signals": {
+        "demand_strong": true,
+        "pain_present": false,
+        "visibility": false
+      },
+      "samples": {
+        "web": [],
+        "reddit": [
+          {
+            "title": "Tem que ser vira lata mesmo",
+            "subreddit": "opiniaoimpopular",
+            "url": "https://reddit.com/r/opiniaoimpopular/comments/1rn12w6/tem_que_ser_vira_lata_mesmo/",
+            "score": 3617,
+            "comments": 684,
+            "text": " \nConceito de vira lata: odiar o próprio país em detrimento de outro\n\nConceito de vira lata na mão do pseudo nacionalista: odiar o próprio país, sendo que problemas existem em todos\n\nConceito de vira lata na mao do vira lata: xingamento sem sentido por quem não quer aceitar a realidade que o país está uma merda.\n\nNos estados unidos, vc consegue se matar de trabalhar pra fazer grana em dolar e comprar uma mansao de 5 milhos de reais pros seus pais. No brasil, você pode se matar de trabalhar que v",
+            "created_utc": 1772860039.0
+          },
+          {
+            "title": "Comprei um notebook gamer recebi um positivo no lugar , perdi o dinheiro e minha conta foi suspensa",
+            "subreddit": "golpe",
+            "url": "https://reddit.com/r/golpe/comments/1o6dj39/comprei_um_notebook_gamer_recebi_um_positivo_no/",
+            "score": 1563,
+            "comments": 659,
+            "text": "Dia 26 de setembro eu estava procurando produtos usados no mercado livre pra comprar, eu tava precisando de um notebook forte o suficiente para trabalhos como after e Photoshop, decidi procurar notebooks gamers no mercado de usados no mercado livre, normalmente eu sei bem filtrar anúncios que são golpes e os que não são! Porém desta vez eu tive a insastifacao de comprar um produto caro ( o mais caro que já comprei no site) de um vendedor golpista, eu comprei um notebook rog g16 por 10K o produto",
+            "created_utc": 1760443187.0
+          },
+          {
+            "title": "SÍNDROME DO PC GAMER? LEIA.",
+            "subreddit": "pirataria",
+            "url": "https://reddit.com/r/pirataria/comments/1q7f0vt/síndrome_do_pc_gamer_leia/",
+            "score": 1774,
+            "comments": 225,
+            "text": "Olá.   \n  \nAssim como você, como seus amigos, como sua família, passei por muito tempo abrindo jogos e não jogando quase nada, as vezes só deixava no menu inicial ou os jogava por 30 minutos antes de fechar e nunca mais abrir, só lembrava de desinstalar semanas depois.   \n  \nVou contar agora sobre como superei a \"síndrome do pc gamer\" em 01 ano e como eu poderia ter feito isso de forma mais rápida.\n\nVou tentar dar uma resumida porque minha história não é o foco, mas obtive um filho no fim de 202",
+            "created_utc": 1767886811.0
+          }
+        ],
+        "hn": [],
+        "pain_examples": []
+      }
+    }
+  }
+}
