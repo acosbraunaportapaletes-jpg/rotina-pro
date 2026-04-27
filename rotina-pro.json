@@ -1,0 +1,5 @@
+{
+  "pack_name": "RotinaPro",
+  "error": "parse fail",
+  "raw": "Arquivo criado: `RotinaPro_Pack.json`\n\n**Resumo do pack:**\n- **46 prompts** distribuídos em **5 categorias**\n- **Financeiro e Conciliação** (8 prompts) — fluxo de caixa, precificação, cobrança, DRE, fiscal\n- **Follow-up e Relacionamento** (8 prompts) — régua pós-venda, reativação, NPS, objeções, propostas\n- **Relatórios e Análise** (6 prompts) — vendas semanal, KPIs, sazonalidade, rentabilidade, marketing\n- **Automação e Ferramentas** (7 prompts) — mapeamento, stack tech, agendamento, estoque, integrações\n- **Planejamento e Estratégia** (6 prompts) — plano 90 dias, SWOT, validação, pricing, expansão\n\nTodos os prompts incluem placeholders `[colchetes]`, são prontos para colar, e geram outputs práticos (planilhas, scripts, checklists, cálculos)."
+}

@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Diagnostico - RotinaPro{% endblock %}
+{% block content %}
+<div class="max-w-2xl mx-auto">
+    <h1 class="text-3xl font-bold mb-2">Diagnostico de Automacao</h1>
+    <p class="text-slate-400 mb-8">Responda as perguntas abaixo para receber seu playbook personalizado.</p>
+
+    <form method="POST" action="/diagnostico" class="space-y-6">
+        {% for q in questions %}
+        <div class="glass rounded-xl p-6">
+            <label class="block text-lg font-semibold mb-3">
+                <span class="text-emerald-400">{{ loop.index }}.</span> {{ q.text }}
+            </label>
+
+            {% if q.type == "select" %}
+                <div class="grid grid-cols-2 gap-2">
+                    {% for opt in q.options %}
+                    <label class="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 p-3 rounded-lg cursor-pointer transition">
+                        <input type="radio" name="{{ q.id }}" value="{{ opt }}" class="accent-emerald-500"
+                            {% if loop.first %}checked{% endif %}>
+                        <span class="text-sm">{{ opt }}</span>
+                    </label>
+                    {% endfor %}
+                </div>
+            {% elif q.type == "checkbox" %}
+                <div class="grid grid-cols-2 gap-2">
+                    {% for opt in q.options %}
+                    <label class="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 p-3 rounded-lg cursor-pointer transition">
+                        <input type="checkbox" name="{{ q.id }}" value="{{ opt }}" class="accent-emerald-500">
+                        <span class="text-sm">{{ opt }}</span>
+                    </label>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+        {% endfor %}
+
+        <button type="submit"
+            class="w-full bg-emerald-600 hover:bg-emerald-500 text-white py-4 rounded-xl text-lg font-semibold transition">
+            Gerar meu playbook
+        </button>
+    </form>
+</div>
+{% endblock %}

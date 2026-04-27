@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %}Dashboard - RotinaPro{% endblock %}
+{% block content %}
+<div class="max-w-4xl mx-auto">
+    <h1 class="text-3xl font-bold mb-6">Dashboard</h1>
+
+    <!-- Stats -->
+    <div class="grid grid-cols-3 gap-4 mb-8">
+        <div class="glass rounded-xl p-5 text-center">
+            <div class="text-3xl font-bold text-emerald-400">{{ playbooks | length }}</div>
+            <div class="text-sm text-slate-400 mt-1">Playbooks</div>
+        </div>
+        <div class="glass rounded-xl p-5 text-center">
+            <div class="text-3xl font-bold text-emerald-400">{{ done_items }}/{{ total_items }}</div>
+            <div class="text-sm text-slate-400 mt-1">Tarefas completas</div>
+        </div>
+        <div class="glass rounded-xl p-5 text-center">
+            <div class="text-3xl font-bold text-emerald-400">{{ progress }}%</div>
+            <div class="text-sm text-slate-400 mt-1">Progresso geral</div>
+        </div>
+    </div>
+
+    <!-- Progress bar -->
+    <div class="glass rounded-xl p-4 mb-8">
+        <div class="flex items-center justify-between mb-2">
+            <span class="text-sm text-slate-400">Progresso de implementacao</span>
+            <span class="text-sm font-semibold text-emerald-400">{{ progress }}%</span>
+        </div>
+        <div class="w-full bg-slate-700 rounded-full h-3">
+            <div class="bg-emerald-500 h-3 rounded-full transition-all" style="width: {{ progress }}%"></div>
+        </div>
+    </div>
+
+    <!-- Playbooks list -->
+    <h2 class="text-xl font-bold mb-4">Seus Playbooks</h2>
+    {% if playbooks %}
+        <div class="space-y-3 mb-8">
+            {% for pb in playbooks %}
+            <a href="/playbook/{{ pb.id }}" class="glass rounded-xl p-5 flex items-center justify-between hover:border-emerald-500/50 transition block">
+                <div>
+                    <h3 class="font-semibold">{{ pb.title }}</h3>
+                    <span class="text-xs text-slate-400">{{ pb.niche | title }} &mdash; {{ pb.created_at }}</span>
+                </div>
+                <span class="text-emerald-400">&rarr;</span>
+            </a>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="glass rounded-xl p-8 text-center mb-8">
+            <p class="text-slate-400 mb-4">Voce ainda nao tem playbooks.</p>
+            <a href="/diagnostico" class="inline-block bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-3 rounded-lg transition">
+                Fazer diagnostico
+            </a>
+        </div>
+    {% endif %}
+
+    <!-- Quick links -->
+    <div class="grid md:grid-cols-2 gap-4">
+        <a href="/diagnostico" class="glass rounded-xl p-5 hover:border-emerald-500/50 transition block text-center">
+            <div class="text-2xl mb-2">&#x1f50d;</div>
+            <h3 class="font-semibold">Novo diagnostico</h3>
+            <p class="text-sm text-slate-400">Gerar outro playbook</p>
+        </a>
+        <a href="/templates" class="glass rounded-xl p-5 hover:border-emerald-500/50 transition block text-center">
+            <div class="text-2xl mb-2">&#x1f4cb;</div>
+            <h3 class="font-semibold">Templates</h3>
+            <p class="text-sm text-slate-400">Mensagens e prompts prontos</p>
+        </a>
+    </div>
+</div>
+{% endblock %}

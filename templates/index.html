@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}RotinaPro - Automatize seu negocio{% endblock %}
+{% block content %}
+<div class="text-center py-16">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">
+        Diagnostico de automacao +<br>
+        <span class="text-emerald-400">playbooks prontos</span> pro seu negocio
+    </h1>
+    <p class="text-lg text-slate-400 mb-8 max-w-2xl mx-auto">
+        Responda 8 perguntas rapidas e receba um plano personalizado com ferramentas,
+        templates e prompts prontos pra usar hoje.
+    </p>
+
+    {% if user %}
+        <a href="/diagnostico" class="inline-block bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-xl text-lg font-semibold transition">
+            Fazer diagnostico gratuito
+        </a>
+    {% else %}
+        <a href="/register" class="inline-block bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-xl text-lg font-semibold transition">
+            Comecar agora - Gratis
+        </a>
+    {% endif %}
+</div>
+
+<div class="grid md:grid-cols-3 gap-6 mt-8">
+    <div class="glass rounded-xl p-6">
+        <div class="text-3xl mb-3">&#x1f50d;</div>
+        <h3 class="text-lg font-semibold mb-2">Diagnostico inteligente</h3>
+        <p class="text-slate-400 text-sm">Quiz de 8 perguntas que mapeia suas dores operacionais e identifica oportunidades de automacao.</p>
+    </div>
+    <div class="glass rounded-xl p-6">
+        <div class="text-3xl mb-3">&#x1f4cb;</div>
+        <h3 class="text-lg font-semibold mb-2">Playbook personalizado</h3>
+        <p class="text-slate-400 text-sm">Receba um plano passo-a-passo com ferramentas, prompts e automacoes prontas pro seu nicho.</p>
+    </div>
+    <div class="glass rounded-xl p-6">
+        <div class="text-3xl mb-3">&#x2705;</div>
+        <h3 class="text-lg font-semibold mb-2">Checklist de implementacao</h3>
+        <p class="text-slate-400 text-sm">Acompanhe seu progresso marcando cada automacao implementada. Veja o que falta e o proximo passo.</p>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}{{ template.title }} - RotinaPro{% endblock %}
+{% block content %}
+<div class="max-w-3xl mx-auto">
+    <a href="/templates" class="text-sm text-slate-400 hover:text-emerald-400 transition">&larr; Voltar aos templates</a>
+
+    <div class="glass rounded-xl p-6 mt-4">
+        <div class="flex items-start justify-between mb-4">
+            <h1 class="text-2xl font-bold">{{ template.title }}</h1>
+            {% if template.is_pro %}
+                <span class="bg-yellow-600/30 text-yellow-400 text-xs px-2 py-1 rounded">PRO</span>
+            {% endif %}
+        </div>
+        <div class="flex gap-2 mb-6">
+            <span class="bg-slate-700 text-slate-300 text-xs px-2 py-1 rounded">{{ template.niche }}</span>
+            <span class="bg-slate-700 text-slate-300 text-xs px-2 py-1 rounded">{{ template.category }}</span>
+        </div>
+
+        <div class="relative">
+            <pre id="template-content" class="bg-slate-900 border border-slate-700 rounded-lg p-4 text-sm text-slate-200 whitespace-pre-wrap overflow-x-auto">{{ template.content }}</pre>
+            <button onclick="copyTemplate()" id="copy-btn"
+                class="absolute top-3 right-3 bg-emerald-600 hover:bg-emerald-500 text-white text-xs px-3 py-1.5 rounded-lg transition">
+                Copiar
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+function copyTemplate() {
+    const text = document.getElementById('template-content').textContent;
+    navigator.clipboard.writeText(text).then(() => {
+        const btn = document.getElementById('copy-btn');
+        btn.textContent = 'Copiado!';
+        btn.classList.replace('bg-emerald-600', 'bg-green-600');
+        setTimeout(() => {
+            btn.textContent = 'Copiar';
+            btn.classList.replace('bg-green-600', 'bg-emerald-600');
+        }, 2000);
+    });
+}
+</script>
+{% endblock %}

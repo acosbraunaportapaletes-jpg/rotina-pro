@@ -1,0 +1,240 @@
+{
+  "slug": "rotina-pro",
+  "idea": "Qual a tarefa mais repetitiva ou chata do seu negócio que ainda não tem boa solução em software?\n\nI'm talking about the stuff you either do manually, patch together with spreadsheets, or just accept as part of the job, even though it probably shouldn't be.\n\nCurious what gaps still exist for small business owners in 2026.",
+  "source_ref": "lead:1svi340",
+  "started_at": "2026-04-27T11:00:19.094546+00:00",
+  "finished_at": "2026-04-27T11:06:05.917523+00:00",
+  "research": {
+    "problema": "Pequenos empresários perdem horas em tarefas operacionais repetitivas (conciliação, follow-up, relatórios) sem saber quais ferramentas ou automações usar para resolver",
+    "quem_sente": "Dono de pequeno negócio (1-10 funcionários) — comércio, serviços, agências — que ainda opera com planilhas e WhatsApp",
+    "quanto_pagariam_usd_mes": "19-47 (compra única, não recorrente — info-produto)",
+    "tam_brasil": "alto",
+    "concorrencia": [
+      "Sebrae gratuito — conteúdo genérico, não actionable",
+      "Cursos Udemy automação — R$27-80, foco em ferramenta específica, não em diagnóstico da dor",
+      "Templates Notion/Canva — genéricos, sem contexto de processo de negócio",
+      "ChatGPT direto — resolve pontual mas não empacota o sistema completo"
+    ],
+    "diferencial_com_ia": "Diagnóstico + templates pré-montados com prompts de IA específicos por tipo de negócio, algo que não existia pré-2024",
+    "riscos": [
+      "Dor genérica demais — cliente não se identifica com produto amplo",
+      "Concorrência de conteúdo gratuito no YouTube/TikTok resolve 80% da necessidade",
+      "Sem recorrência — info-produto é venda única, LTV baixo"
+    ],
+    "bayes": {
+      "prior": 0.12,
+      "evidencias_plus": [
+        "Mercado enorme de PMEs no Brasil (>6M com CNPJ ativo)",
+        "Timing IA criou demanda nova por 'como usar IA no meu negócio'",
+        "Custo zero de produção elimina risco financeiro"
+      ],
+      "evidencias_minus": [
+        "Dor formulada de forma extremamente vaga — não há nicho definido",
+        "Sem validação de disposição de pagar (nenhum sinal de demanda observado)",
+        "Competição com conteúdo gratuito abundante",
+        "Nenhum cliente específico mencionado — é hipótese, não observação"
+      ],
+      "posterior": 0.09,
+      "justificativa_posterior": "Evidências negativas (vaguidão, sem validação, conteúdo grátis) pesam mais que as positivas; posterior cai ligeiramente abaixo do prior"
+    },
+    "mcda": {
+      "mercado": {
+        "score": 8,
+        "nota": "6M+ PMEs no Brasil, dor universal — mercado enorme em teoria"
+      },
+      "disposicao_pagar": {
+        "score": 4,
+        "nota": "PME brasileira é price-sensitive; conteúdo gratuito abundante reduz willingness to pay por ebook genérico"
+      },
+      "viabilidade_tecnica": {
+        "score": 10,
+        "nota": "Info-produto: 1 pessoa produz em 3-5 dias, custo zero"
+      },
+      "moat": {
+        "score": 2,
+        "nota": "Zero barreira — qualquer creator replica em dias; conhecimento genérico não é defensável"
+      },
+      "timing": {
+        "score": 7,
+        "nota": "Onda de IA para PMEs está no pico de curiosidade em 2025-2026, janela real"
+      },
+      "score_ponderado": 5.85
+    },
+    "fermi": {
+      "n_clientes_br": 2000000,
+      "ticket_mensal_brl": 47,
+      "conversao_esperada": 0.001,
+      "cenarios": {
+        "bull": {
+          "p": 0.2,
+          "mrr_ano1_brl": 8000
+        },
+        "base": {
+          "p": 0.5,
+          "mrr_ano1_brl": 2800
+        },
+        "bear": {
+          "p": 0.3,
+          "mrr_ano1_brl": 600
+        }
+      },
+      "expected_value_mrr_brl": 3180
+    },
+    "red_team": {
+      "risk_manager": "O risco binário: sem nicho definido, o produto fala com todo mundo e não converte ninguém. Marketing genérico para PMEs é buraco negro de CAC.",
+      "cliente_cetico": "Por que eu pagaria R$47 num ebook se posso pedir pro ChatGPT me montar um plano de automação de graça em 5 minutos? Preciso ver valor muito acima do que a IA já me dá sozinha.",
+      "fundador_senior": "Vi dezenas de ebooks 'automação para negócios' falharem porque a dor é real mas difusa. Os que funcionam nicham brutalmente: 'automação de follow-up para dentistas' vende, 'automação para PMEs' não. Sem nicho = sem copy que converte."
+    },
+    "veredito": "CAUTION",
+    "confianca_veredito_pct": 38,
+    "motivo_veredito": "Mercado existe e timing é bom, mas a ideia é vaga demais para converter — os 3 red-teamers levantam objeções válidas (sem nicho, conteúdo grátis compete, CAC alto para público genérico); precisa nicchar violentamente antes de ser GO"
+  },
+  "spec": {
+    "name": "RotinaPro",
+    "slug": "rotina-pro",
+    "pitch": "Diagnóstico de automação + playbooks prontos pra seu negócio em 5 min",
+    "stack": [
+      "python",
+      "flask",
+      "sqlite",
+      "htmx"
+    ],
+    "core_features": [
+      {
+        "id": "auth",
+        "desc": "login com email+senha, hash bcrypt, sessão via flask-login"
+      },
+      {
+        "id": "diagnostic",
+        "desc": "quiz de 8 perguntas (tipo de negócio, ferramentas atuais, dores) que classifica o perfil operacional do usuário"
+      },
+      {
+        "id": "playbook",
+        "desc": "gera playbook de automação personalizado via LLM com passos concretos, ferramentas sugeridas e prompts prontos — filtrado por nicho (ex: dentista, barbearia, agência)"
+      },
+      {
+        "id": "templates",
+        "desc": "biblioteca de templates acionáveis (mensagens WhatsApp follow-up, planilhas de conciliação, prompts IA) tagueados por nicho e tarefa"
+      },
+      {
+        "id": "checklist",
+        "desc": "checklist de implementação com status por automação — usuário marca o que já aplicou, vê progresso e próximo passo"
+      }
+    ],
+    "db_tables": [
+      {
+        "name": "users",
+        "columns": "id PK, email UNIQUE, password_hash, plan TEXT DEFAULT 'free', created_at"
+      },
+      {
+        "name": "diagnostics",
+        "columns": "id PK, user_id FK, business_type TEXT, team_size INT, tools_current TEXT, pains TEXT, score JSON, created_at"
+      },
+      {
+        "name": "playbooks",
+        "columns": "id PK, user_id FK, diagnostic_id FK, title TEXT, content TEXT, niche TEXT, created_at"
+      },
+      {
+        "name": "templates",
+        "columns": "id PK, title TEXT, category TEXT, niche TEXT, content TEXT, is_pro BOOLEAN DEFAULT 0"
+      },
+      {
+        "name": "checklist_items",
+        "columns": "id PK, user_id FK, playbook_id FK, title TEXT, status TEXT DEFAULT 'pending', completed_at"
+      }
+    ],
+    "routes": [
+      {
+        "path": "/",
+        "method": "GET",
+        "handler": "index",
+        "desc": "landing page com CTA pro diagnóstico"
+      },
+      {
+        "path": "/register",
+        "method": "POST",
+        "handler": "register",
+        "desc": "cria conta"
+      },
+      {
+        "path": "/login",
+        "method": "POST",
+        "handler": "login",
+        "desc": "autentica usuário"
+      },
+      {
+        "path": "/diagnostico",
+        "method": "GET",
+        "handler": "diagnostic_form",
+        "desc": "exibe quiz de diagnóstico"
+      },
+      {
+        "path": "/diagnostico",
+        "method": "POST",
+        "handler": "diagnostic_submit",
+        "desc": "processa respostas e gera playbook via LLM"
+      },
+      {
+        "path": "/playbook/<id>",
+        "method": "GET",
+        "handler": "playbook_view",
+        "desc": "exibe playbook gerado com checklist"
+      },
+      {
+        "path": "/checklist/<id>/toggle",
+        "method": "POST",
+        "handler": "checklist_toggle",
+        "desc": "marca/desmarca item do checklist (htmx)"
+      },
+      {
+        "path": "/templates",
+        "method": "GET",
+        "handler": "templates_list",
+        "desc": "lista templates filtráveis por nicho e categoria"
+      },
+      {
+        "path": "/templates/<id>",
+        "method": "GET",
+        "handler": "template_view",
+        "desc": "exibe template com botão copiar"
+      },
+      {
+        "path": "/dashboard",
+        "method": "GET",
+        "handler": "dashboard",
+        "desc": "painel com progresso do checklist e playbooks salvos"
+      }
+    ],
+    "env_vars": [
+      "SECRET_KEY",
+      "DATABASE_URL",
+      "ANTHROPIC_API_KEY"
+    ],
+    "pricing_plan": {
+      "free": "1 diagnóstico + playbook básico (3 automações) + 10 templates genéricos + checklist",
+      "pro": "R$29/mês — diagnósticos ilimitados, playbook completo (10+ automações por nicho), todos os templates, re-geração de playbook com contexto atualizado, novos nichos mensais"
+    }
+  },
+  "build_summary": "MVP completo do **RotinaPro** criado com 12 arquivos. O `app.py` (~300 linhas) inclui: init automático do SQLite com 5 tabelas, auth com hash werkzeug e sessão Flask, quiz de 8 perguntas com formulário completo, geração de playbook via Anthropic API (com fallback rule-based que funciona sem chave), biblioteca de 8 templates seed filtráveis por nicho/categoria, checklist interativo com htmx (toggle sem reload), e dashboard com métricas de progresso. Templates usam Tailwind CDN + htmx com design escuro. O `landing.html` é estático com CSS inline, pronto pra deploy em Netlify/Vercel. Para rodar: `pip install -r requirements.txt && python app.py` na porta 5000.",
+  "validation": {
+    "ok": true,
+    "missing_files": [],
+    "py_files": [
+      "app.py"
+    ],
+    "html_files": [
+      "landing.html",
+      "templates\\base.html",
+      "templates\\index.html",
+      "templates\\login.html",
+      "templates\\diagnostic.html",
+      "templates\\playbook.html",
+      "templates\\templates.html",
+      "templates\\template_view.html",
+      "templates\\dashboard.html"
+    ],
+    "compile_errors": [],
+    "total_size_bytes": 76708,
+    "file_count": 14
+  }
+}
